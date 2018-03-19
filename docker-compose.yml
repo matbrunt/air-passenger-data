@@ -1,0 +1,21 @@
+version: '3'
+services:
+  explore:
+    image: honir/analysis:latest
+    environment:
+      - GRANT_SUDO=yes
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/home/jovyan/work
+    user: root
+    working_dir: /home/jovyan/work
+    command: start-notebook.sh --NotebookApp.token=''
+
+  prophet:
+    image: honir:prophet
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/usr/src
+    command: jupyter notebook --no-browser --ip 0.0.0.0 --allow-root --NotebookApp.token=

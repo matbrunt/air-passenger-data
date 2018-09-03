@@ -5,7 +5,7 @@
 - Group countries into arbitary regions and forecast per region
 
 - ARIMA and Prophet models
-    - ARIMA
+    - [ARIMA](https://machinelearningmastery.com/arima-for-time-series-forecasting-with-python/)
     - seasonal naive baseline
 
 - ETL pipeline to take extract raw data into SQLite table
@@ -45,3 +45,8 @@
 - Flight data
 
 - Reliability (service on-time) data
+
+### Analysis
+
+- Routes per region over time
+    - do they remain constant, increase / decrease?

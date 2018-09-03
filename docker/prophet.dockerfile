@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
     python-pip vim-tiny \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip jupyter fbprophet
+RUN pip install --upgrade scipy scikit-learn statsmodels fbprophet
+RUN pip install --upgrade pip seaborn openpyxl pyyaml jupyter xlrd
 RUN mkdir -p /usr/src
 
 ENV PYTHONPATH /usr/src:$PYTHONPATH

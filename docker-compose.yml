@@ -13,7 +13,7 @@ services:
     command: start-notebook.sh --NotebookApp.token=''
 
   prophet:
-    image: honir:prophet
+    image: honir/prophet:latest
     ports:
       - "8888:8888"
     volumes:
